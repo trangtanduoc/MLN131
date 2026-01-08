@@ -40,7 +40,7 @@ export function Game() {
   // check admin
   useEffect(() => {
     const adminKey = localStorage.getItem("ADMIN_KEY");
-    if (adminKey === "BO_MAY_LA_ADMIN") setIsAdmin(true);
+    if (adminKey === "CHO_NGUOI_NOI_AY") setIsAdmin(true);
   }, []);
 
   // realtime listeners
