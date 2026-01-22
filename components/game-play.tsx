@@ -348,34 +348,48 @@ export default function GamePlay({ roomCode, playerId }: { roomCode: string; pla
   const otherPlayers = allPlayers.filter(p => p.id !== playerId);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-100 to-purple-100 p-6">
+    <div className="min-h-screen bg-gradient-to-br from-red-100 via-yellow-50 to-orange-100 p-6">
       <audio ref={audioRef} src="/Lobby-music.mp3" autoPlay loop />
       <div className="mx-auto max-w-2xl space-y-6 text-center">
-        <div className="bg-white rounded-xl shadow-lg p-4">
-          <p className="text-2xl font-bold text-indigo-600">Điểm: {score}</p>
+        <div className="bg-gradient-to-r from-red-600 to-yellow-500 text-white rounded-xl shadow-2xl p-6 border-4 border-yellow-400">
+          <p className="text-lg font-bold drop-shadow">📊 ĐIỂM CHIẾN THẮNG</p>
+          <p className="text-5xl font-black drop-shadow-lg">{score}</p>
+          <p className="text-sm mt-2 drop-shadow">Càng cao càng tốt - Hãy chinh phục!</p>
         </div>
 
         {/* Question Phase */}
         {phase === "question" && currentQuestion && (
-          <div className="p-6 border rounded-xl bg-white shadow-lg">
-            <h2 className="text-xl font-semibold mb-2">{currentQuestion.question}</h2>
-            <p className="text-sm text-gray-500 mb-4">Thời gian còn lại: {timeLeft}s</p>
+          <div className="p-8 border-4 border-amber-800 rounded-xl bg-gradient-to-br from-amber-50 to-yellow-50 dark:from-amber-900 dark:to-yellow-900 shadow-2xl">
+            <div className="flex justify-between items-center mb-4">
+              <div className="flex-1">
+                <div className="inline-block bg-red-600 text-white px-4 py-2 rounded-full font-bold drop-shadow">
+                  📚 Câu hỏi {currentIdx + 1}/{questions.length}
+                </div>
+              </div>
+              <div className={`text-3xl font-black font-mono drop-shadow transition ${timeLeft <= 5 ? 'text-red-600 animate-pulse' : 'text-amber-800'}`}>
+                ⏱️ {timeLeft}s
+              </div>
+            </div>
+
+            <h2 className="text-2xl font-bold mb-6 text-amber-900 dark:text-amber-100 leading-tight drop-shadow">
+              {currentQuestion.question}
+            </h2>
 
             <div className="grid grid-cols-2 gap-4">
               {currentQuestion.options.map((opt, index) => {
                 const isCorrect = index === currentQuestion.answer;
                 const isSelected = opt === selectedOption;
 
-                let style = "bg-gray-100 hover:bg-gray-200";
+                let style = "bg-white dark:bg-gray-800 hover:bg-amber-100 dark:hover:bg-amber-900 border-2 border-amber-300 dark:border-amber-700 text-amber-900 dark:text-amber-100";
 
                 if (selectedOption) {
                   // Nếu là đáp án đúng -> luôn hiển thị màu xanh
                   if (isCorrect) {
-                    style = "bg-green-500 text-white";
+                    style = "bg-emerald-500 text-white border-4 border-emerald-600 shadow-lg scale-105";
                   }
                   // Nếu là đáp án được chọn SAI -> hiển thị màu đỏ
                   else if (isSelected) {
-                    style = "bg-red-500 text-white";
+                    style = "bg-red-500 text-white border-4 border-red-600 shadow-lg scale-95";
                   }
                 }
 

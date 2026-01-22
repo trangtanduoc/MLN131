@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Gamepad2, Clock, CheckCircle, Info, Trophy } from "lucide-react";
+import { Gamepad2, Clock, CheckCircle, Info, Trophy, Zap, Star } from "lucide-react";
 import {
   createRoom,
   joinRoom,
@@ -143,6 +143,17 @@ export function Game() {
 
   return (
     <div className="mx-auto max-w-2xl space-y-8">
+      {/* Vietnamese History Theme Header */}
+      <div className="relative overflow-hidden rounded-lg bg-gradient-to-r from-red-600 via-yellow-500 to-red-600 p-6 text-white shadow-2xl border-4 border-yellow-400">
+        <div className="absolute inset-0 opacity-10" style={{
+          backgroundImage: "repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,.1) 35px, rgba(255,255,255,.1) 70px)"
+        }}></div>
+        <div className="relative text-center">
+          <h1 className="text-4xl font-bold mb-2 drop-shadow-lg">🇻🇳 LỊCH SỬ VIỆT NAM 🇻🇳</h1>
+          <p className="text-lg font-semibold drop-shadow-lg">Trò chơi kiến thức về cơ sở hình thành tư tưởng Hồ Chí Minh</p>
+        </div>
+      </div>
+
       {/* End Game Popup cho người chơi */}
       {!isAdmin && gameEnded && (
         <Dialog open={gameEnded} onOpenChange={(open) => {
@@ -215,13 +226,13 @@ export function Game() {
 
           {/* === CHƯA BẮT ĐẦU === */}
           {!gameStarted && !gameEnded && (
-            <Card className="border-2 border-primary/20 shadow-xl">
-              <CardHeader className="text-center">
-                <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
-                  <Gamepad2 className="h-8 w-8 text-primary" />
+            <Card className="border-4 border-red-600 shadow-2xl bg-gradient-to-br from-red-50 to-yellow-50 dark:from-red-950 dark:to-yellow-950">
+              <CardHeader className="text-center bg-gradient-to-r from-red-600 to-yellow-500 text-white rounded-t-lg">
+                <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-white/20 backdrop-blur">
+                  <Gamepad2 className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle className="text-2xl">Giao diện Admin</CardTitle>
-                <CardDescription>Tạo phòng và theo dõi người chơi tham gia</CardDescription>
+                <CardTitle className="text-3xl font-bold drop-shadow">⚔️ BẢNG ĐIỀU KHIỂN QUẢN TRỊ ⚔️</CardTitle>
+                <CardDescription className="text-white/90 text-base">Lãnh đạo trò chơi - Quản lý người chơi - Theo dõi xếp hạng</CardDescription>
               </CardHeader>
               <CardContent className="space-y-4 text-center">
                 <div className="flex justify-center gap-2">
@@ -259,13 +270,13 @@ export function Game() {
         <>
           {/* === Player UI === */}
           {!playerId && (
-            <Card className="border-2 border-primary/20 shadow-xl">
-              <CardHeader className="text-center">
-                <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
-                  <Gamepad2 className="h-8 w-8 text-primary" />
+            <Card className="border-4 border-yellow-500 shadow-2xl bg-gradient-to-br from-yellow-50 to-red-50 dark:from-yellow-950 dark:to-red-950">
+              <CardHeader className="text-center bg-gradient-to-r from-yellow-500 to-red-600 text-white rounded-t-lg">
+                <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-white/20 backdrop-blur">
+                  <Star className="h-8 w-8 text-white animate-spin" />
                 </div>
-                <CardTitle className="text-2xl">Tham gia trò chơi</CardTitle>
-                <CardDescription>Nhập mã phòng để tham gia cùng bạn bè</CardDescription>
+                <CardTitle className="text-3xl font-bold drop-shadow">⭐ THAM GIA TRẬN CHIẾN ⭐</CardTitle>
+                <CardDescription className="text-white/90 text-base">Nhập mã phòng - Tham gia cùng bạn bè - Chinh phục lịch sử</CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="flex gap-3">
@@ -323,42 +334,45 @@ export function Game() {
       )}
 
       {/* === Luật chơi === */}
-      <Card>
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <Info className="h-5 w-5 text-primary" />
-            Luật chơi
+      <Card className="border-4 border-amber-700 shadow-xl bg-gradient-to-br from-amber-50 to-yellow-50 dark:from-amber-950 dark:to-yellow-950">
+        <CardHeader className="bg-gradient-to-r from-amber-800 to-yellow-600 text-white rounded-t-lg">
+          <CardTitle className="flex items-center gap-2 text-2xl font-bold drop-shadow">
+            <Zap className="h-6 w-6" />
+            📜 LUẬT CHINH CHIẾN 📜
           </CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
           {/* Thời gian */}
-          <div className="flex gap-3 rounded-lg bg-muted/50 p-4">
-            <Clock className="h-5 w-5 shrink-0 text-primary" />
+          <div className="flex gap-3 rounded-lg bg-red-100 dark:bg-red-900/30 p-4 border-2 border-red-300 dark:border-red-700">
+            <Clock className="h-5 w-5 shrink-0 text-red-600 dark:text-red-400" />
             <div>
-              <p className="font-medium">Thời gian</p>
-              <p className="text-sm text-muted-foreground">18 giây cho mỗi câu hỏi</p>
-              <p className="text-sm text-muted-foreground">
-                Dự kiến trò chơi sẽ diễn ra trong 8 phút, trò chơi sẽ kết thúc khi admin đóng phòng
+              <p className="font-bold text-red-700 dark:text-red-400">⏰ THỜI GIAN CHIẾN ĐẤU</p>
+              <p className="text-sm font-semibold text-red-600 dark:text-red-300">18 giây cho mỗi câu hỏi lịch sử</p>
+              <p className="text-sm text-red-600 dark:text-red-300">
+                Dự kiến 8 phút - Trò chơi kết thúc khi Admin đóng phòng
               </p>
             </div>
           </div>
 
           {/* Nội dung trả lời */}
-          <div className="flex gap-3">
-            <CheckCircle className="h-5 w-5 shrink-0 text-emerald-500" />
-            <p className="text-sm">Trả lời các câu hỏi về cơ sở hình thành tư tưởng Hồ Chí Minh</p>
+          <div className="flex gap-3 rounded-lg bg-yellow-100 dark:bg-yellow-900/30 p-4 border-2 border-yellow-300 dark:border-yellow-700">
+            <CheckCircle className="h-5 w-5 shrink-0 text-yellow-600 dark:text-yellow-400" />
+            <div>
+              <p className="font-bold text-yellow-700 dark:text-yellow-400">📚 CHỦ ĐỀ KIẾN THỨC</p>
+              <p className="text-sm text-yellow-600 dark:text-yellow-300">Trả lời các câu hỏi về cơ sở hình thành tư tưởng Hồ Chí Minh &amp; Lịch sử Việt Nam</p>
+            </div>
           </div>
 
           {/* Cơ chế bốc bài */}
-          <div className="flex gap-3">
-            <CheckCircle className="h-5 w-5 shrink-0 text-emerald-500" />
+          <div className="flex gap-3 rounded-lg bg-amber-100 dark:bg-amber-900/30 p-4 border-2 border-amber-300 dark:border-amber-700">
+            <Zap className="h-5 w-5 shrink-0 text-amber-600 dark:text-amber-400 flex-shrink-0" />
             <div className="text-sm">
-              Cơ chế bốc bài:
-              <ul className="list-disc ml-5">
-                <li>Mỗi lần trả lời đúng, bạn được điểm nhiều hoặc ít dựa trên thời gian trả lời nhanh/chậm.</li>
-                <li>Sau đó, bạn được bốc <strong>1 lá card</strong> từ bộ bài (có thể bỏ qua nếu không muốn bốc).</li>
-                <li>Mỗi lá card sẽ ảnh hưởng trực tiếp đến điểm số của bạn hoặc đối thủ (nhân điểm, cộng/trừ điểm, cướp điểm, mất toàn bộ…)</li>
-                <li>Nếu trả lời sai, bạn không được điểm và có thể chuyển sang câu hỏi tiếp theo.</li>
+              <p className="font-bold text-amber-700 dark:text-amber-400 mb-2">🃏 CƠ CHẾ BỐC BÀI PHÉP THUẬT</p>
+              <ul className="list-disc ml-5 space-y-1 text-amber-700 dark:text-amber-300">
+                <li>✅ Trả lời <strong>đúng</strong> = Nhận điểm (nhiều/ít tùy tốc độ)</li>
+                <li>🎴 Bốc <strong>1 lá card</strong> may mắn từ bộ bài kỳ bí (có thể bỏ qua)</li>
+                <li>⚡ Card có thể: nhân điểm, cộng/trừ, cướp, hay mất hết điểm!</li>
+                <li>❌ Trả lời <strong>sai</strong> = Không điểm - Chuyển câu tiếp theo</li>
               </ul>
             </div>
           </div>

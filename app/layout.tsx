@@ -16,7 +16,7 @@ const sourceCode = Source_Code_Pro({
 })
 
 export const metadata: Metadata = {
-  title: 'HCM202 - Nhóm 4',
+  title: 'MLN131 - Nhóm 4',
   description: 'Được tạo bởi nhóm 4',
   icons: {
     icon: '/logo.png',
