@@ -149,8 +149,8 @@ export function Game() {
           backgroundImage: "repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,.1) 35px, rgba(255,255,255,.1) 70px)"
         }}></div>
         <div className="relative text-center">
-          <h1 className="text-4xl font-bold mb-2 drop-shadow-lg">🇻🇳 LỊCH SỬ VIỆT NAM 🇻🇳</h1>
-          <p className="text-lg font-semibold drop-shadow-lg">Trò chơi kiến thức về cơ sở hình thành tư tưởng Hồ Chí Minh</p>
+          <h1 className="text-4xl font-bold mb-2 drop-shadow-lg"> MÁC-LÊNIN </h1>
+          <p className="text-lg font-semibold drop-shadow-lg">Trò chơi kiến thức về liên minh Công-Nông-Trí</p>
         </div>
       </div>
 
@@ -359,7 +359,7 @@ export function Game() {
             <CheckCircle className="h-5 w-5 shrink-0 text-yellow-600 dark:text-yellow-400" />
             <div>
               <p className="font-bold text-yellow-700 dark:text-yellow-400">📚 CHỦ ĐỀ KIẾN THỨC</p>
-              <p className="text-sm text-yellow-600 dark:text-yellow-300">Trả lời các câu hỏi về cơ sở hình thành tư tưởng Hồ Chí Minh &amp; Lịch sử Việt Nam</p>
+              <p className="text-sm text-yellow-600 dark:text-yellow-300">Trả lời các câu hỏi về Liên Minh Công-Nông-Trí &amp; Mác - Lênin</p>
             </div>
           </div>
 
