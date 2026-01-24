@@ -74,6 +74,8 @@
   --sidebar-ring: #ffd700;
 }
 
+
+
 @theme inline {
   --font-sans: var(--font-sans);
   --font-mono: var(--font-mono);
@@ -124,4 +126,6 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  
 }
