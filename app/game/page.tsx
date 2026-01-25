@@ -1,5 +1,5 @@
 import React from 'react';
-import {Game} from '@/components/game'; // Import file game.tsx có sẵn trong components của bạn
+import {Game} from '@/components/game'; 
 
 export default function GamePage() {
   return (
