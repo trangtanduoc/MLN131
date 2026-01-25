@@ -1,5 +1,4 @@
-import React from 'react';
-import InteractiveStory from '@/components/InteractiveStory'; // Import file vừa tạo ở Bước 1
+import InteractiveStory from '@/components/InteractiveStory'; 
 
 export default function StoryPage() {
   return (
