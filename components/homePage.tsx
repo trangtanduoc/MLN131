@@ -38,7 +38,7 @@ const definitionsData = [
   {
     id: 1,
     title: "1. Giai cấp công nhân",
-    content: "Là những người lao động trong lĩnh vực công nghiệp, dịch vụ công nghiệp, làm việc chủ yếu bằng lao động trí óc hoặc chân tay...",
+    content:"Là những người lao động trong lĩnh vực công nghiệp, dịch vụ công nghiệp, làm việc chủ yếu bằng lao động trí óc hoặc chân tay trong các nhà máy, xí nghiệp, không hoặc rất ít tư liệu sản xuất, bán sức lao động để nhận tiền lương.",
     role: "Họ giữ vai trò quan trọng trong quá trình sản xuất công nghiệp và hiện đại hóa.",
     image: "/images/bacHo3.webp",
     order: "normal"
@@ -46,7 +46,7 @@ const definitionsData = [
   {
     id: 2,
     title: "2. Giai cấp nông dân",
-    content: "Là những người lao động trong lĩnh vực nông nghiệp, lâm nghiệp, ngư nghiệp, gắn bó với đất đai...",
+    content: "Là những người lao động trong lĩnh vực nông nghiệp, lâm nghiệp, ngư nghiệp, gắn bó với đất đai và sản xuất nông thôn, có thể sở hữu hoặc sử dụng một phần tư liệu sản xuất (ruộng đất, công cụ).",
     role: "Họ là lực lượng chủ yếu trong sản xuất lương thực, thực phẩm và ổn định xã hội nông thôn.",
     image: "/images/bacHo5.webp",
     order: "reverse"
@@ -54,7 +54,7 @@ const definitionsData = [
   {
     id: 3,
     title: "3. Tầng lớp trí thức",
-    content: "Là những người lao động trí óc có trình độ học vấn và chuyên môn cao...",
+    content: "Là những người lao động trí óc có trình độ học vấn và chuyên môn cao, hoạt động trong các lĩnh vực như khoa học, giáo dục, y tế, văn hóa, công nghệ, quản lý…",
     role: "Họ đóng vai trò quan trọng trong sáng tạo tri thức, khoa học – công nghệ và phát triển xã hội.",
     image: "/images/BacHo4.jpg",
     order: "normal"
@@ -66,22 +66,22 @@ const challengesData = [
   {
     id: 1,
     title: "Cơ cấu xã hội thay đổi",
-    content: "Lực lượng công nhân chuyển dịch mạnh sang khu vực dịch vụ, công nghệ cao; nông dân giảm về số lượng..."
+    content: "Lực lượng công nhân chuyển dịch mạnh sang khu vực dịch vụ, công nghệ cao; nông dân giảm về số lượng, đất nông nghiệp thu hẹp; trí thức ngày càng đa dạng về lĩnh vực và quan điểm. Điều này làm cho việc gắn kết lợi ích giữa ba lực lượng trở nên phức tạp hơn."
   },
   {
     id: 2,
     title: "Chênh lệch thu nhập và cơ hội",
-    content: "Khoảng cách giữa nông thôn – thành thị, giữa công nhân – trí thức..."
+    content: " Khoảng cách giữa nông thôn – thành thị, giữa công nhân – trí thức, giữa lao động giản đơn và lao động tri thức còn lớn, gây khó khăn trong việc duy trì sự đồng thuận xã hội."
   },
   {
     id: 3,
-    title: "Tác động của toàn cầu hóa & 4.0",
-    content: "Đòi hỏi công nhân và nông dân phải được đào tạo lại..."
+    title: "TTác động của toàn cầu hóa và cách mạng công nghiệp 4.0",
+    content: "Đòi hỏi công nhân và nông dân phải được đào tạo lại, thích ứng với công nghệ mới, trong khi đội ngũ trí thức phải trở thành cầu nối chuyển giao tri thức."
   },
   {
     id: 4,
     title: "Yêu cầu đổi mới chính sách",
-    content: "Cần có cơ chế phối hợp thực chất hơn..."
+    content: "Cần có cơ chế phối hợp thực chất hơn, chẳng hạn như phát triển nông nghiệp công nghệ cao, doanh nghiệp công – nông liên kết, chương trình đào tạo nghề gắn với thực tiễn, và tăng vai trò của trí thức trong hoạch định chính sách phát triển."
   }
 ];
 
