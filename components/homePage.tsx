@@ -75,7 +75,7 @@ const challengesData = [
   },
   {
     id: 3,
-    title: "TTác động của toàn cầu hóa và cách mạng công nghiệp 4.0",
+    title: "Tác động của toàn cầu hóa và cách mạng công nghiệp 4.0",
     content: "Đòi hỏi công nhân và nông dân phải được đào tạo lại, thích ứng với công nghệ mới, trong khi đội ngũ trí thức phải trở thành cầu nối chuyển giao tri thức."
   },
   {
