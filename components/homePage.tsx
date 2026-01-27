@@ -40,16 +40,18 @@ const definitionsData = [
     title: "1. Giai cấp công nhân",
     content:"Là những người lao động trong lĩnh vực công nghiệp, dịch vụ công nghiệp, làm việc chủ yếu bằng lao động trí óc hoặc chân tay trong các nhà máy, xí nghiệp, không hoặc rất ít tư liệu sản xuất, bán sức lao động để nhận tiền lương.",
     role: "Họ giữ vai trò quan trọng trong quá trình sản xuất công nghiệp và hiện đại hóa.",
-    image: "/images/bacHo3.webp",
-    order: "normal"
+    image: "/images/bacHo5.webp",
+    order: "normal",
+    details:"Chủ tịch Hồ Chí Minh đến thăm Sở Nông Lâm Hà Nội và sử dụng thử chiếc máy cấy tại ruộng thí nghiệm của Sở (7-1960). Ảnh: TTXVN"
   },
   {
     id: 2,
     title: "2. Giai cấp nông dân",
     content: "Là những người lao động trong lĩnh vực nông nghiệp, lâm nghiệp, ngư nghiệp, gắn bó với đất đai và sản xuất nông thôn, có thể sở hữu hoặc sử dụng một phần tư liệu sản xuất (ruộng đất, công cụ).",
     role: "Họ là lực lượng chủ yếu trong sản xuất lương thực, thực phẩm và ổn định xã hội nông thôn.",
-    image: "/images/bacHo5.webp",
-    order: "reverse"
+    image: "/images/bacHo3.webp",
+    order: "reverse",
+    details:"Bác Hồ thăm nông dân hợp tác xã Hùng Sơn, huyện Đại Từ, tỉnh Thái Nguyên, gặt mùa năm 1954. Ảnh: TTXVN"
   },
   {
     id: 3,
@@ -57,7 +59,8 @@ const definitionsData = [
     content: "Là những người lao động trí óc có trình độ học vấn và chuyên môn cao, hoạt động trong các lĩnh vực như khoa học, giáo dục, y tế, văn hóa, công nghệ, quản lý…",
     role: "Họ đóng vai trò quan trọng trong sáng tạo tri thức, khoa học – công nghệ và phát triển xã hội.",
     image: "/images/BacHo4.jpg",
-    order: "normal"
+    order: "normal",
+    details:"Hồ Chủ tịch làm việc tại nhà 54 trong khu Phủ Chủ tịch, nơi Người gắn bó giai đoạn 1954–1958."
   },
 ];
 
@@ -252,6 +255,9 @@ export default function HomePage() {
                         className="object-cover transition-transform duration-700 group-hover:scale-110" 
                       />
                    </div>
+             <p className={`mt-8 text-sm md:text-base font-bold italic text-[#54595F] text-center tracking-wide uppercase`}>
+    {item.details}
+  </p>
                 </div>
               </div>
             ))}
