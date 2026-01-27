@@ -34,7 +34,7 @@ export function Leaderboard({
   return (
     <Card className="border-4 border-yellow-600 shadow-2xl bg-gradient-to-br from-yellow-50 to-amber-50 dark:from-yellow-950 dark:to-amber-950">
       <CardHeader className="bg-gradient-to-r from-yellow-500 to-amber-600 text-white rounded-t-lg">
-        <CardTitle className="text-2xl font-black drop-shadow">🏆 BẢNG XẾPH ẠNG VÀNG 🏆</CardTitle>
+        <CardTitle className="text-2xl font-black drop-shadow">🏆 BẢNG XẾP HẠNG VÀNG 🏆</CardTitle>
         <p className="text-sm text-white/90 mt-1">Những chiến binh hàng đầu trong cuộc chinh phục lịch sử</p>
       </CardHeader>
 
@@ -70,7 +70,7 @@ export function Leaderboard({
                     {p.name} {isMe && "👈 (BẠN)"}
                   </span>
                 </div>
-                <span className="text-2xl font-black text-amber-900 dark:text-amber-100">{p.score} 📈</span>
+                <span className="text-2xl font-black text-amber-900 dark:text-amber-100">{p.score}</span>
               </motion.div>
             );
           })}

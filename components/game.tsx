@@ -347,7 +347,7 @@ export function Game() {
             <Clock className="h-5 w-5 shrink-0 text-red-600 dark:text-red-400" />
             <div>
               <p className="font-bold text-red-700 dark:text-red-400">⏰ THỜI GIAN CHIẾN ĐẤU</p>
-              <p className="text-sm font-semibold text-red-600 dark:text-red-300">18 giây cho mỗi câu hỏi lịch sử</p>
+              <p className="text-sm font-semibold text-red-600 dark:text-red-300">18 giây cho mỗi câu hỏi</p>
               <p className="text-sm text-red-600 dark:text-red-300">
                 Dự kiến 8 phút - Trò chơi kết thúc khi Admin đóng phòng
               </p>
